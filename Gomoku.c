@@ -103,7 +103,7 @@ int main(void){
 
 	char ch;
 	int list_sample[elements][elements] = {0};
-	int x = 3, y = 3;
+	int x = elements/2, y = elements/2; //Center coordinate
 	int i = 1;
 	int flag = 1;
 	int counter = 1;
@@ -112,8 +112,8 @@ int main(void){
 	show_elements(list_sample);
 	
 	for(i = 1; i < 5; i++){
-		
-		x = 3; y = 3; flag = 1;
+		//Set center coordinate
+		x = elements/2; y = elements/2; flag = 1;
 		
 		while(flag == 1){
 			four_case_up(i, &x, &y);
@@ -125,8 +125,9 @@ int main(void){
 				break;
 			}		
 		}//end of while
-
-		x = 3; y = 3; flag = 1;
+		
+		//Set center coordinate
+		x = elements/2; y = elements/2; flag = 1;
 		
 		while(flag == 1){
 			four_case_down(i, &x, &y);
